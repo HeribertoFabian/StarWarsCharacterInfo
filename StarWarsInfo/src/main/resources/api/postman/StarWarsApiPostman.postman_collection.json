@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "e3eb65ec-2346-47b4-a724-1170e647179c",
+		"name": "StarWarsApiPostman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17740068"
+	},
+	"item": [
+		{
+			"name": "localhost:8081/api/characters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/v1/characters?gender=female",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"characters"
+					],
+					"query": [
+						{
+							"key": "gender",
+							"value": "female"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
