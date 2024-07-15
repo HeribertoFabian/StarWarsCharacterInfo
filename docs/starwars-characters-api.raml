@@ -11,29 +11,21 @@ baseUri: http://api.example.com/starwars
         description: Filter characters by gender.
         type: string
         required: false
+        enum: [male, female, unknown, "n/a"]
         example: female
     responses:
       200:
         description: Successful response with a CSV file containing character information.
         body:
           text/csv:
-            example: |
-              Name,Gender,Height,Mass
-              Luke Skywalker,male,172,77
-              Leia Organa,female,150,49
+            example: !include samples/response-200.csv
       400:
         description: Bad request due to invalid query parameter.
         body:
           application/json:
-            example: |
-              {
-                "error": "Invalid gender parameter"
-              }
+            example: !include samples/response-400.json
       500:
         description: Internal server error.
         body:
           application/json:
-            example: |
-              {
-                "error": "Internal server error. Please try again later."
-              }
+            example: !include samples/response-500.json
